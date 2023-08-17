@@ -8,14 +8,10 @@ function App() {
     setGameRunning(prevState => !prevState)
   
   }
-  function btnText(gameRunning){
-    const btnTxt= gameRunning? "Pause": "Play"
-    return btnTxt
-
-  }
+  
   return (
   <div className={gameRunning?"":"pause"}>
-    <button className = "video-game-button" onClick = {pausePlay}>{btnText(gameRunning)}</button>
+    <button className = "video-game-button" onClick = {pausePlay}>{gameRunning?"Pause": "play"}</button>
   </div>
   )
 }
